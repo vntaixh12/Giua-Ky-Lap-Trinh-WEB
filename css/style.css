@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+body.dark {
+  background-color: #222;
+  color: #eee;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background: #09e565;
+  padding: 10px;
+}
+
+nav ul li {
+  margin-right: 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+#skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  #skills-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

@@ -1,0 +1,48 @@
+$primary-color: #09e565;
+$dark-background: #222;
+$light-background: #fff;
+
+@mixin responsive($breakpoint) {
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: $light-background;
+  color: #333;
+
+  &.dark {
+    background-color: $dark-background;
+    color: #eee;
+  }
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  background: $primary-color;
+  padding: 10px;
+
+  li {
+    margin-right: 15px;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+#skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+@include responsive(768px) {
+  #skills-list {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
